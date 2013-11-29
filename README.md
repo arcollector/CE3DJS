@@ -33,8 +33,11 @@ And lastly is the texturing mapping, the engine only works with `256 color bitma
 Things that I've left out
 ==========================
 
-	Fixed point math: for obvious reasons
-	Frame coherence: this states that if an object is invisible it will keep invisible for a couple of frames, although, this sounds nice, in practice it don't work properly
-	Clear reduction: the engine implements a z-buffer of 1/z values, this add the possiblity to add a certain amount of " a translation value" until the 1/z values overflow, with this approeach, you can hold on the clearing of the z buffer a couple of frames, instead of clearing it every frame, but again in practice this only make your code uglier.
-	
-	
+***Fixed point math:***
+For obvious reasons.
+
+***Frame coherence:***
+This states that if an object is invisible it will keep invisible for a couple of frames, although, this sounds nice, in practice it don't work properly.
+
+***Clear reduction:***
+The engine implements a z-buffer of 1/z values, this add the possiblity to add a certain amount of " a translation value" until the 1/z values overflow, with this approeach, you can hold on the clearing of the z buffer a couple of frames, instead of clearing it every frame, but again in practice this only make your code uglier.
