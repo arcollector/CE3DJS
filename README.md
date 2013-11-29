@@ -29,3 +29,12 @@ The engine only works with quad polygons, if you want to use triangle polygons y
 The other problem is that the engine only works properly if the vertices that compound a face from the mesh are specified in `clockwise order`, so although if you have DXF quad based mesh file, is highly probable that the vertices are stored in `counter-clockwise order`, which again it won't work this engine.
 
 And lastly is the texturing mapping, the engine only works with `256 color bitmap BMP` files, any paint program support this type of BMP format, so this will not a problem for you.
+
+Things that I've left out
+==========================
+
+	Fixed point math: for obvious reasons
+	Frame coherence: this states that if an object is invisible it will keep invisible for a couple of frames, although, this sounds nice, in practice it don't work properly
+	Clear reduction: the engine implements a z-buffer of 1/z values, this add the possiblity to add a certain amount of " a translation value" until the 1/z values overflow, with this approeach, you can hold on the clearing of the z buffer a couple of frames, instead of clearing it every frame, but again in practice this only make your code uglier.
+	
+	
