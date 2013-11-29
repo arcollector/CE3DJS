@@ -1,0 +1,1 @@
+Engine.Light = new Vector3D();
