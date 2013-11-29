@@ -21,3 +21,11 @@ Helper functions are stored in a separate file with the `helpers` string append 
 How to use
 ===========
 You need to setup a web server to run the code examples, I recommend `http-server` for nodejs, otherwise, you can also run chrome with the option `allow-file-access-from-files` or in firefox by enabling the option `security.fileuri.strict_origin_policy` to `false` in `about:config`
+
+About the engine
+================
+The engine only works with quad polygons, if you want to use triangle polygons you need to repeat some vertex in order to get a quad. Second, the engine only works with `DXF` files, any 3D modeler software support this format, but the problem is that the DXF file must be a `quad mesh based`, you will noted this by opening the file and looking for `3D FACE` section(s), if the DXF file don't contain this section(s), then you have triangle based mesh, which it isn't gone work with this engine.
+
+The other problem is that the engine only works properly if the vertices that compound a face from the mesh are specified in `clockwise order`, so although if you have DXF quad based mesh file, is highly probable that the vertices are stored in `counter-clockwise order`, which again it won't work this engine.
+
+And lastly for the texturing mapping, the engine only works with 256 color bitmap BMP files, any paint program support this type of BMP, so this will not a problem for you.
